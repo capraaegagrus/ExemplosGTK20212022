@@ -1,4 +1,4 @@
-
+#Listas
 l = [1,2,3,4,5,6,7,8,9,10,112,113]
 
 l2 = [1, "Dous", 3+4j,2.34, [1,2,3]]
@@ -20,7 +20,7 @@ print (l[1::2])
 print (l[:6])
 l[2:5] = ["Tres", "Catro","Cinco"]
 print (l)
-l[2:5] = ["Cero"]
+#l[2:5] = ["Cero"]
 print (l)
 
 l3 = list()
@@ -38,6 +38,29 @@ print (t)
 
 for elemento in t:
     print (elemento)
+    
+l.append(113)
+l.extend ((114,115,116,117))
+l.insert(10, 112)
+print (l.pop (14))
+print (l.remove(117))
+print (l.index (113) )
+#print (l.index (113,10,12) )
+l.reverse()
+
+lista = ["Ola", "OOOOla", "Hola", "Hi"]
+
+def ordea (x):
+    return len (x)
+
+lista.sort(key=ordea)
+
+print (lista)
+
+print ("Número veces que aparece 113 co método count: "+ str (l.count (113)))
+print (len(l))
+
+
 
 #Diccionarios
 
@@ -54,4 +77,7 @@ print (d.items())
 print (d.keys())
 print (d.values())
 print (d.get ("Manuela", "Clave non encontrada"))
+print (len(d))
+
+
 
