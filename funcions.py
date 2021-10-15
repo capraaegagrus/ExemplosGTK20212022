@@ -66,3 +66,26 @@ l4 = [s*v for s in c
           for v in l
           if v > 0]
 print (l4)
+
+#Xeradores
+
+l5 = (n**2 for n in l)
+print (l5)
+
+def meuXerador (n, m, s):
+    while (n <= m):
+        yield n
+        n += s
+xerador =  meuXerador (7, 15, 2)
+print (xerador)
+
+for n in xerador:
+    print (n)
+
+# for (int i = 7, n<m, i+=s) java
+
+for i in range(7,16,2):
+    print (i)
+
+r = range(7,16,2)
+print (type(r))

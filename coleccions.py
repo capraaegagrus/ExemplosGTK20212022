@@ -79,5 +79,25 @@ print (d.values())
 print (d.get ("Manuela", "Clave non encontrada"))
 print (len(d))
 
+#Cadeas de caracteres
+
+cadea ="Python para todos"
+
+print (cadea[1:18:2])
+
+print (cadea.count ('o'))
+print (len(cadea))
+print (cadea.find('o', 5, 14))
+
+cadea2 = cadea.join (('Ola ', 'a ', 'todos ', 'no ', 'presente ', 'curso '))
+print (cadea2)
+
+print (cadea.partition (' '))
+
+print (cadea.split (' '))
+print (cadea.replace (' ', '_'))
+
+
+
 
 
