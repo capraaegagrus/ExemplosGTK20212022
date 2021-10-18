@@ -29,6 +29,34 @@ def reemprazarDixitos (dixito, cadea):
 print (reemprazarDixitos ('X', "Segredo"))
 
 
+'''Exercicio 6.6'''
+
+def reemprazoVogal (palabra):
+    """ordeV = {1:'a',
+             2:'e',
+             3:'i',
+             4:'o',
+             5:'u'}"""
+    vogais ="aeiou"
+    ordeV = { 'a':1,
+              'e':2,
+              'i':3,
+              'o':4,
+              'u':5}
+    novaPalabra = list()
+    for i in range (len (palabra)):
+        caracter = palabra[i]
+        if caracter in ordeV.keys():
+            if ordeV[caracter] == 5 :
+                novaPalabra[i] = vogais[0]
+            else:
+                novaPalabra.append(vogais[ordeV[caracter]])
+        else:
+            novaPalabra.append(caracter)
+    return str(novaPalabra)
+
+print (reemprazoVogal ("frigorifico"))
+
 
 
 ''''Exercicio 7.1'''
@@ -88,5 +116,30 @@ def vecesQueAparecenAsPalabras (frase):
     return diccionario
 
 print (vecesQueAparecenAsPalabras("Que bonito dia fai hoxe, pese a que chove"))
+
+'''Exercicio 8.4'''
+
+def cadeaLongaPorCaracteresEnTexto (texto):
+    d = dict()
+    palabras = texto.split()
+    for i in range (len(texto)):
+        caracter = texto[i]
+        if caracter != ' ':
+            if not caracter in d:
+                for palabra in palabras:
+                    if palabra.count (caracter) != 0:
+                        if caracter in d:
+                            if len(d[caracter]) < len (palabra):
+                                d [caracter] = palabra
+                        else:
+                            d [caracter] = palabra
+    return d
+
+print (cadeaLongaPorCaracteresEnTexto("A  estaba oscuro e paixaxe fúnebre"))
+
+
+
+
+
 
 
